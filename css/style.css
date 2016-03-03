@@ -38,6 +38,7 @@ main {
     cursor: pointer;
     filter: alpha(opacity=0);
     opacity: 0;
+
 }
 
 .sp-slideshow input + label {
@@ -85,7 +86,7 @@ main {
     cursor: pointer;
     z-index: 1000;
     background: transparent url(../images/arrows.png) no-repeat;
-    transition: opacity linear 0.3s; 
+    transition: opacity linear 0.3s;
 }
 
 .sp-arrow:hover{
@@ -140,24 +141,35 @@ input.sp-selector-5:checked ~ .sp-content {
 }
 
 input.sp-selector-1:checked ~ .sp-content .sp-parallax-bg {
-    background-position: 0 0;
+	-webkit-animation: 0.7s linear 0s 1 alternate parallax-bg-1;
+	background-position: 0;
 }
 
 input.sp-selector-2:checked ~ .sp-content .sp-parallax-bg {
-    background-position: -200px 0;
+	-webkit-animation: 0.7s linear 0s 1 alternate parallax-bg-2;
+	background-position: -200px;
 }
 
 input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
-    background-position: -400px 0;
+	-webkit-animation: 0.7s linear 0s 1 alternate parallax-bg-3;
+	background-position: -400px;
 }
 
 input.sp-selector-4:checked ~ .sp-content .sp-parallax-bg {
-    background-position: -600px 0;
+	-webkit-animation: 0.7s linear 0s 1 alternate parallax-bg-4;
+	background-position: -600px;
 }
 
 input.sp-selector-5:checked ~ .sp-content .sp-parallax-bg {
-    background-position: -800px 0;
+	-webkit-animation: 0.7s linear 0s 1 alternate parallax-bg-5;
+	background-position: -800px;
 }
+
+@-webkit-keyframes parallax-bg-1 { from { background-position: 0; } to { background-position: 0; }  }
+@-webkit-keyframes parallax-bg-2 { from { background-position: 0; } to { background-position: -200px; }  }
+@-webkit-keyframes parallax-bg-3 { from { background-position: -200px; } to { background-position: -400px; }  }
+@-webkit-keyframes parallax-bg-4 { from { background-position: -400px; } to { background-position: -600px; }  }
+@-webkit-keyframes parallax-bg-5 { from { background-position: -600px; } to { background-position: -800px; }  }
 
 .sp-slider {
     position: relative;
@@ -190,25 +202,36 @@ input.sp-selector-5:checked ~ .sp-content .sp-parallax-bg {
 }
 
 input.sp-selector-1:checked ~ .sp-content .sp-slider {
-    left: 0;
+	-webkit-animation: 0.8s ease-in 0s 1 alternate slider-1;
+	left: 0; 
 }
 
 input.sp-selector-2:checked ~ .sp-content .sp-slider {
-    left: -100%;
+	-webkit-animation: 0.8s ease-in 0s 1 alternate slider-2;
+	left: -100%; 
 }
 
 input.sp-selector-3:checked ~ .sp-content .sp-slider {
-    left: -200%;
+	-webkit-animation: 0.8s ease-in 0s 1 alternate slider-3;
+	left: -200%; 
 }
 
 input.sp-selector-4:checked ~ .sp-content .sp-slider {
-    left: -300%;
+	-webkit-animation: 0.8s ease-in 0s 1 alternate slider-4;
+	left: -300%; 
 }
 
 input.sp-selector-5:checked ~ .sp-content .sp-slider {
-    left: -400%;
+	-webkit-animation: 0.8s ease-in 0s 1 alternate slider-5;
+	left: -400%; 
 }
 
+@-webkit-keyframes slider-1 { from { left: 0; } to { left: 0; }  }
+@-webkit-keyframes slider-2 { from { left: 0; } to { left: -100%; }  }
+@-webkit-keyframes slider-3 { from { left: -100%; } to { left: -200%; }  }
+@-webkit-keyframes slider-4 { from { left: -200%; } to { left: -300%; }  }
+@-webkit-keyframes slider-5 { from { left: -300%; } to { left: -400%; }  }
+    
 input.sp-selector-1:checked ~ .sp-content .sp-slider > li:first-child,
 input.sp-selector-2:checked ~ .sp-content .sp-slider > li:nth-child(2),
 input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3),
