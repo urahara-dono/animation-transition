@@ -180,6 +180,7 @@ input.sp-selector-5:checked ~ .sp-content .sp-parallax-bg {
     padding: 0 60px;
     float: left;
     text-align: center;
+    -webkit-transition: opacity ease-in 0.8s 0.4s;
     opacity: 0.4;
 }
 
